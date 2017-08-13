@@ -35,6 +35,8 @@ func InitFlags() (flags SurveillanceFlags) {
 	flag.StringVar(&flags.topic, "t", "/surveillance/notification/#", "MQTT Topic to publish to")
 	flag.BoolVar(&flags.verbose, "v", false, "Enable verbose logging")
 	flag.StringVar(&flags.logfile, "l", "stderr", "Enable logging to file")
+	flag.StringVar(&userToken, "usertoken", "", "Pushover User Token")
+	flag.StringVar(&appToken, "apptoken", "", "Pushover App Token")
 	flag.Parse()
 	return flags
 }
